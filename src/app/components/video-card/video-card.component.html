@@ -1,0 +1,68 @@
+<div class="no-statistics" *ngIf="!statistics">
+  <div class="water-mark-play">
+    <span
+      (click)="playVideo.emit(video)"
+      class="mdi mdi-play-circle-outline mdi-48px flex-center"
+    ></span>
+  </div>
+  <img [src]="video.thumb.url" />
+</div>
+
+<div class="video-item" *ngIf="statistics">
+  <div class="water-mark-play">
+    <div class="video-details">
+      <div class="play">
+        <div>
+          <a
+            [href]="'https://youtube.com/channel/' + video.channelId"
+            target="_blank"
+            class="flex-center"
+          >
+            <span class="margin-r-5 mdi mdi-open-in-new mdi-18px"> </span>
+            {{ video.channelTitle }}
+          </a>
+        </div>
+        <div class="margin-b-10">
+          <span
+            (click)="playVideo.emit(video)"
+            class="mdi mdi-play-circle-outline mdi-48px"
+          ></span>
+          <p>
+            {{ video.title }}
+          </p>
+          <span class="duration">
+            {{ video.duration }}
+          </span>
+        </div>
+      </div>
+      <div class="statistics">
+        <div class="countInfo">
+          <span class="mdi mdi-eye-outline mdi-18px"></span>
+          <p>
+            {{ video.statistics.viewCount }}
+          </p>
+        </div>
+
+        <div class="countInfo">
+          <span class="mdi mdi-thumb-up-outline mdi-18px"></span>
+          <p>
+            {{ video.statistics.likeCount }}
+          </p>
+        </div>
+        <div class="countInfo">
+          <span class="mdi mdi-thumb-down-outline mdi-18px"></span>
+          <p>
+            {{ video.statistics.dislikeCount }}
+          </p>
+        </div>
+        <div class="countInfo">
+          <span class="mdi mdi-comment-outline mdi-18px"></span>
+          <p>
+            {{ video.statistics.commentCount }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img [src]="video.thumb.url" />
+</div>

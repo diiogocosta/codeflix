@@ -1,0 +1,40 @@
+button:focus {
+  outline: 0;
+}
+
+.btn {
+  display: inline-flex;
+  margin-right: 5px;
+  align-items: center;
+  padding: 8px 27px;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+
+  .mdi {
+    margin: 0 5px;
+
+    &.mdi-md {
+      font-size: 32px;
+    }
+
+    &.mdi-lg {
+      font-size: 42px;
+    }
+  }
+}
+
+.btn.btn-transparent {
+  background-color: rgba(51, 51, 51, 0.4);
+  margin-right: 15px;
+
+  &:hover {
+    box-shadow: 0 12px 19px -8vw rgba(0, 0, 0, 0.35);
+    background-color: #e6e6e6;
+    color: #000;
+    transform: scale(1.05);
+    transition: transform 350ms;
+  }
+}

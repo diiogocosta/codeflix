@@ -1,0 +1,38 @@
+.video-container {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.gradient-layer {
+  height: 100%;
+  width: 60%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(0, 0, 0, 0.8491771708683473) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.offset-layer {
+  height: 68px;
+}
+
+.meta-container {
+  padding: 40px 0px 100px;
+  width: 50%;
+
+  img {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+}

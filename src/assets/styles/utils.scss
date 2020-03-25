@@ -1,0 +1,29 @@
+.f-bold {
+  font-weight: bold;
+}
+
+.padding-l-5 {
+  padding-left: 5px;
+}
+
+.margin-r-5 {
+  margin-right: 5px;
+}
+
+.margin-b-10 {
+  margin-bottom: 10px;
+}
+
+.absolute-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+}

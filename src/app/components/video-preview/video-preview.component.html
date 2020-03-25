@@ -1,0 +1,40 @@
+<div class="video-container">
+  <video
+    width="100%"
+    loop
+    #video
+    muted
+    autoplay
+    (canplay)="video.muted = true; video.play()"
+  >
+    <source src="assets/videos/videoplayback.mp4" type="video/mp4" />
+  </video>
+  <div class="gradient-layer"></div>
+</div>
+<div class="offset-layer"></div>
+<div class="meta-container" *ngIf="randomVideo">
+  <h1>{{ randomVideo?.channelTitle }}</h1>
+  <app-video-card
+    [video]="randomVideo"
+    [statistics]="false"
+    (playVideo)="playVideo.emit($event)"
+  ></app-video-card>
+  <h2>
+    {{ randomVideo?.title }}
+  </h2>
+  <p>
+    {{ randomVideo?.description }}
+  </p>
+
+  <span>
+    <button type="button" class="btn btn-transparent f-bold" (click)="teste()">
+      <span class="mdi mdi-play mdi-md"></span>Assistir
+    </button>
+    <button type="button" class="btn btn-transparent f-bold">
+      <span class="mdi mdi-plus mdi-md"></span>Minha lista
+    </button>
+    <button type="button" class="btn btn-transparent f-bold">
+      <span class="mdi mdi-information-outline mdi-md"></span>Mais informações
+    </button>
+  </span>
+</div>

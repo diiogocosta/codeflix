@@ -1,0 +1,13 @@
+<div class="header-container" #header>
+  <span class="logo">Codeflix</span>
+  <ul class="navigation-list">
+    <li class="navigation-item" *ngFor="let menuItem of menu">
+      <a
+        [ngClass]="{ 'current-active': menuItem.description === active }"
+        [routerLink]="menuItem.route"
+        (click)="toggleActive(menuItem.description)"
+        >{{ menuItem.description }}</a
+      >
+    </li>
+  </ul>
+</div>
